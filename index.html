@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" async></script>
+  <title>Cookies Memory Game</title>
+</head>
+<body>
+ 
+  <div class="overlay-text visible">
+    <div class="pathwork"></div>
+    Click to Start
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    <div class="pathwork"></div>
+    VICTORY
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+
+
+<div class="game-wrapper">
+
+  <div class="car-wrapper">
+  <div class="game-info-container">
+    <div class="game-info">
+      Time <span id="time-remaining">100</span>
+    </div>
+    <div class="game-info">
+      Flips <span id="flips">0</span>
+    </div>
+    <div class="game-info">
+      Previous time <span id="previous-time">0</span>
+    </div>
+    <img class="car" src="Assets/Images/icecar.svg" alt="">
+  </div></div>
+
+  <div class="game-container">
+    <div class="page-title"><img src="Assets/Images/icecremTitile.svg" alt=""></div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+       
+        <img class="card-value" src="Assets/Images/pie1.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+       
+        <img class="card-value" src="Assets/Images/pie1.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+      
+        <img class="card-value" src="Assets/Images/pie2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+     
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+    
+        <img class="card-value" src="Assets/Images/pie2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+      
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+      
+        <img class="card-value" src="Assets/Images/pie3.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+     
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+      
+        <img class="card-value" src="Assets/Images/pie3.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+     
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+     
+        <img class="card-value" src="Assets/Images/pie4.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+      
+        <img class="card-value" src="Assets/Images/pie4.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+     
+        <img class="card-value" src="Assets/Images/pie5.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+       
+        <img class="card-value" src="Assets/Images/pie5.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+      
+        <img class="card-value" src="Assets/Images/pie6.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+       
+        <img class="card-value" src="Assets/Images/pie6.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+       
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+    
+        <img class="card-value" src="Assets/Images/pie7.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+      
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+     
+        <img class="card-value" src="Assets/Images/pie7.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+     
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+    
+        <img class="card-value" src="Assets/Images/pie8.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+      
+        <img class="cookies" src="Assets/Images/bgcard.png">
+      </div>
+      <div class="card-front card-face">
+     
+        <img class="card-value" src="Assets/Images/pie8.png">
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

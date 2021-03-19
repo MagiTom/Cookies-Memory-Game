@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+body {
+  margin: 0;
+  background: white;
+}
+
+.page-title {
+ width: 200px;
+ height: auto;
+ margin: 2em auto;
+ grid-column: 1/-1;
+}
+
+.game-wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  height: 100%;
+  margin: 1em auto;
+}
+
+.car-wrapper{
+  width: 30%;
+  height: 100%;
+  margin-left: 2rem;
+  align-self: flex-end;
+ margin-right: auto;
+ position: relative;
+}
+
+.car{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  bottom: 0;
+}
+
+.game-info-container {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid white;
+  outline: 1px solid rgba(113, 43, 24, 0.2);
+  background-color: #FCFAD8;
+  height: 550px;
+}
+
+.game-info {
+  padding: 10px;
+  font-size: 2em;
+  color: #712C18;
+}
+
+.game-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  height: 135px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.card-face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
+
+.card.visible .card-back {
+  transform: rotateY(-180deg); 
+}
+
+.card.visible .card-front {
+  transform: rotateY(0); 
+}
+
+.card.matched .card-front .card-value {
+  animation: dance 2s linear 500ms;
+}
+
+.card-back {
+  transform: rotateY(0); 
+}
+
+.cookies {
+  object-fit: cover;
+  transition: transform 100ms ease-in-out;
+  transform: scale(1);
+}
+
+.card-back:hover .cookies {
+  transform: scale(1.2);
+}
+
+.card-value {
+  width: 70%;
+  height: auto;
+  position: relative;
+  transition: transform 100ms ease-in-out;
+  transform: scale(.9);
+}
+
+.card-front:hover .card-value {
+  transform: scale(1);
+}
+
+.card-front {
+  background-color: #FEB9C8;
+  transform: rotateY(180deg);
+}
+
+.overlay-text {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FEB9C8;
+  cursor: pointer;
+  font-family: 'Berkshire Swash', cursive;
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+.pathwork{
+  position: absolute;
+  top: 0;
+  background-image: url(./Assets/Images/pathwork.svg);
+  width: 100%;
+  height: 70px;
+}
+
+@keyframes dance {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  25% {
+    transform: rotate(-30deg)
+  }
+  75% {
+    transform: rotate(30deg)
+  }
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 10em;
+  }
+}
+
+@media (max-width: 600px) {
+  .card{
+     height: 90px;
+  width: 70px;
+  }
+
+  .game-wrapper {
+    flex-direction: column-reverse;
+  }
+  .car-wrapper{
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
